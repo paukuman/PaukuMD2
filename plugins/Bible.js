@@ -9,7 +9,10 @@ let bibleChapterHandler = async (m, { conn }) => {
     let chapterInput = m.text.split(' ').slice(1).join('').trim()
 
     if (!chapterInput) {
-      throw new Error(`Please specify the chapter number or name. Example: -bible john 3:16`)
+      throw new Error(`
+      Please specify the chapter number or name. Example: -bible john 3:16
+      Silakan sebutkan nomor bab atau nama. Contoh: -Alkitab Yohanes 3:16
+      `)
     }
 
     // Encode the chapterInput to handle special characters
@@ -19,12 +22,15 @@ let bibleChapterHandler = async (m, { conn }) => {
     let chapterRes = await fetch(`${BASE_URL}/${chapterInput}`)
 
     if (!chapterRes.ok) {
-      throw new Error(`Please specify the chapter number or name. Example: -bible john 3:16`)
+      throw new Error(`
+      Please specify the chapter number or name. Example: -bible john 3:16
+      Silakan sebutkan nomor bab atau nama. Contoh: -Alkitab Yohanes 3:16
+      `)
     }
 
     let chapterData = await chapterRes.json()
 
-    let translatedChapterHindi = await translate(chapterData.text, { to: 'hi', autoCorrect: true })
+    let translatedChapterIndo = await translate(chapterData.text, { to: 'id', autoCorrect: true })
 
     let translatedChapterEnglish = await translate(chapterData.text, {
       to: 'en',
@@ -38,8 +44,8 @@ Type: ${chapterData.translation_name}\n
 Number of verses: ${chapterData.verses.length}\n
 🔮 *Chapter Content (English):*\n
 ${translatedChapterEnglish.text}\n
-🔮 *Chapter Content (Hindi):*\n
-${translatedChapterHindi.text}`
+🔮 *Chapter Content (Indonesia):*\n
+${translatedChapterIndo.text}`
 
     m.reply(bibleChapter)
   } catch (error) {
