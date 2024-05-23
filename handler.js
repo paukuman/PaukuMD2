@@ -556,10 +556,10 @@ export async function participantsUpdate({ id, participants, action }) {
                 contextInfo: {
                   mentionedJid: [user],
                   externalAdReply: {
-                    title: 'ᴛʜᴇ ɢᴜʀᴜ-ʙᴏᴛ',
+                    title: process.env.WM,
                     body: 'welcome to Group',
                     thumbnailUrl: welcomeApiUrl,
-                    sourceUrl: 'https://chat.whatsapp.com/F3sB3pR3tClBvVmlIkqDJp',
+                    sourceUrl: 'https://s.id/doujinlife',
                     mediaType: 1,
                     renderLargerThumbnail: true,
                   },
@@ -613,10 +613,10 @@ export async function participantsUpdate({ id, participants, action }) {
                 contextInfo: {
                   mentionedJid: [user],
                   externalAdReply: {
-                    title: 'ᴛʜᴇ ɢᴜʀᴜ-ʙᴏᴛ',
+                    title: process.env.WM,
                     body: 'Goodbye from  Group',
                     thumbnailUrl: leaveApiUrl,
-                    sourceUrl: 'https://chat.whatsapp.com/F3sB3pR3tClBvVmlIkqDJp',
+                    sourceUrl: 'https://s.id/doujinlife',
                     mediaType: 1,
                     renderLargerThumbnail: true,
                   },
