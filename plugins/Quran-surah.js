@@ -47,6 +47,8 @@ let quranSurahHandler = async (m, { conn }) => {
 📜 *Surah ${json.data.number}: ${json.data.asma.ar.long} (${json.data.asma.en.long})*\n
 Type: ${json.data.type.en}\n
 Number of verses: ${json.data.ayahCount}\n
+🔮 *Explanation (Indonesia):*\n
+${json.data.tafsir.id}\n
 🔮 *Explanation (Urdu):*\n
 ${translatedTafsirUrdu.text}\n
 🔮 *Explanation (English):*\n
