@@ -565,12 +565,12 @@ ${readMore}
 │ *15.* Tools Menu
 │ *16.* AI Menu
 │ *17.* Religion Menu
-│ *18.* Plugin Menu
+│ *18.* Plugin Menul
 ╰───────⳹
  `
   const { result, key, timeout } = await conn.sendMessage(
     m.chat,
-    { video: { url: menuvid }, caption: infoText.trim(),
+    { video: { /*url: menuvid*/ url:"https://ia600403.us.archive.org/13/items/undefined-imgur_202405/undefined%20-%20Imgur.gif" }, caption: infoText.trim(),
     contextInfo: {
       mentionedJid: [m.sender],
       isForwarded: true,
@@ -581,10 +581,10 @@ ${readMore}
       },
       forwardingScore: 999,
       externalAdReply: {
-        title: 'ᴛʜᴇ ɢᴜʀᴜ-ʙᴏᴛ',
+        title: 'Aoi MD',
         body: 'ᴍᴇɴᴜ',
         thumbnailUrl: 'https://i.pinimg.com/736x/67/4b/41/674b416d858ce262be0c53253b3f1dcc.jpg',
-        sourceUrl: 'https://guruapi.tech',
+        sourceUrl: 'https://anidb.id',
         mediaType: 1,
         renderLargerThumbnail: false,
       },
