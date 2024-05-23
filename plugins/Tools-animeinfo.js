@@ -9,7 +9,7 @@ let handler = async (m, { conn, text, usedPrefix }) => {
     let anime = await client.searchAnime(text)
     let result = anime.data[0]
     let resultes = await translate(`${result.background}`, { to: 'en', autoCorrect: true })
-    let resultes2 = await translate(`${result.synopsis}`, { to: 'hi', autoCorrect: true })
+    let resultes2 = await translate(`${result.synopsis}`, { to: 'id', autoCorrect: true })
     let AnimeInfo = `
 🎀 • *Title:* ${result.title}
 🎋 • *Format:* ${result.type}
@@ -34,7 +34,7 @@ let handler = async (m, { conn, text, usedPrefix }) => {
   }
 }
 
-handler.help = ['anime']
-handler.tags = ['anime']
-handler.command = /^(anime|animeinfo)$/i
+handler.help = ['animeinfo']
+handler.tags = ['animeinfo']
+handler.command = /^(animeinfo)$/i
 export default handler
