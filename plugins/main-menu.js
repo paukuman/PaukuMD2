@@ -570,7 +570,7 @@ ${readMore}
  `
   const { result, key, timeout } = await conn.sendMessage(
     m.chat,
-    { video: { /*url: menuvid*/ url:"https://ia600403.us.archive.org/13/items/undefined-imgur_202405/undefined%20-%20Imgur.gif" }, caption: infoText.trim(),
+    { video: { url: menuvid }, caption: infoText.trim(),
     contextInfo: {
       mentionedJid: [m.sender],
       isForwarded: true,
