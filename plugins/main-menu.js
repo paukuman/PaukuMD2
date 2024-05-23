@@ -536,7 +536,7 @@ const handler = async (m, { conn, command, text, args, usedPrefix }) => {
 ⛥ *Uptime:* ${muptime}
 ⛥ *Database:*  ${totalreg}
 ╰──────────⳹
-> © Guru Sensei\n\n
+> © AOI MD\n\n
 ${readMore}
 乂───『 *I N F O  C M D*』───乂 
 │ *${totalfeatures}* Commands
