@@ -565,7 +565,7 @@ ${readMore}
 │ *15.* Tools Menu
 │ *16.* AI Menu
 │ *17.* Religion Menu
-│ *18.* Plugin Menul
+│ *18.* Plugin Menu
 ╰───────⳹
  `
   const { result, key, timeout } = await conn.sendMessage(
@@ -575,7 +575,7 @@ ${readMore}
       mentionedJid: [m.sender],
       isForwarded: true,
       forwardedNewsletterMessageInfo: {
-        newsletterJid: '120363178281296360@newsletter',
+        newsletterJid: '0@newsletter',
         newsletterName: 'Click Here or u Gay',
         serverMessageId: -1,
       },
