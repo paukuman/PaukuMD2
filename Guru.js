@@ -103,7 +103,7 @@ async function gandu() {
       process.exit(1)
     } else {
       console.log(`${endi}`)
-      console.log(chalk.bgBlack(chalk.redBright('initializing Guru Bot')))
+      console.log(chalk.bgBlack(chalk.redBright('initializing AOI Bot')))
     }
   } catch (error) {
     console.error('Error:', error)
@@ -372,21 +372,6 @@ async function connectionUpdate(update) {
     conn.logger.info(chalk.yellow('\nLogging in....'))
   }
   if (connection === 'open') {
-    const { jid, name } = conn.user
-
-    let msgf = `Hai🤩${name} Congrats you have successfully deployed GURU-BOT\nJoin my support Group for any Query\n https://chat.whatsapp.com/F3sB3pR3tClBvVmlIkqDJp`
-
-    let gmes = conn.sendMessage(
-      jid,
-      {
-        text: msgf,
-        mentions: [jid],
-      },
-      {
-        quoted: null,
-      }
-    )
-
     conn.logger.info(chalk.yellow('\n🚩 R E A D Y'))
   }
 
