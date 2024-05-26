@@ -14,7 +14,7 @@ let handler = async (m, { conn, args, usedPrefix, text, command }) => {
     /*if (file.size >= 300000000)
       return m.reply('Error: File size is too large (Maximum Size: 300MB)')
 */
-    const downloadingMessage = `🌩️ Downloading file... Please wait.`
+    const downloadingMessage = `Downloading file...\nPlease wait...`
     m.reply(downloadingMessage)
 
     const caption = `*_Successfully downloaded..._*\nFile: ${file.name}\nSize: ${formatBytes(file.size)}`

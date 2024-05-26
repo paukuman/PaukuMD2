@@ -1,6 +1,11 @@
 import fg from 'api-dylux'
 
-const handler = async (m, { conn, args, usedPrefix, command }) => {
+const handler = async (m, {
+  conn,
+  args,
+  usedPrefix,
+  command
+}) => {
   if (!args[0]) {
     throw `
     Please send the link of a Facebook video\n\n📌 EXAMPLE :\n*${usedPrefix + command}* https://www.facebook.com/Ankursajiyaan/videos/981948876160874/?mibextid=rS40aB7S9Ucbxw6v
@@ -19,23 +24,24 @@ const handler = async (m, { conn, args, usedPrefix, command }) => {
 
   try {
     const result = await fg.fbdl(args[0])
-
     const response = await fetch(result.videoUrl)
-    const arrayBuffer = await response.arrayBuffer()
-    const videoBuffer = Buffer.from(arrayBuffer)
-
     // get filename
     const header = response.headers.get('Content-Disposition');
     const parts = header.split(';');
     const filename = parts[1].split('=')[1];
 
+    /*
+    let res = await conn.sendLoader(m.chat, m, response, "FB Downloader", 500);
+    const arrayBuffer = await res.arrayBuffer()
+    const videoBuffer = Buffer.from(arrayBuffer)
+    */
     const tex = `
-⊱ ─── [ Aoi FBDL ] ─── ⊰
+─── [ Aoi FB Downloader ] ───
 
 ↳ *TITLE :* ${result.title}
 ↳ *SIZE  :* ${result.size}`
 
-    conn.sendFile(m.chat, videoBuffer, filename, tex, m)
+    conn.sendFile(m.chat, result.videoUrl, filename, tex, m)
     m.react(done)
   } catch (error) {
     console.log(error)

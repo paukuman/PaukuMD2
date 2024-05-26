@@ -586,7 +586,7 @@ const handler = async (m, {
           newsletterName: 'Click Here or u Lolicon',
           serverMessageId: -1,
         },
-        
+
         forwardingScore: 999,
         externalAdReply: {
           title: 'Aoi MD',
@@ -617,17 +617,17 @@ const handler = async (m, {
     rows: [{
         id: ".botmenu",
         title: "Bot Menu",
-        description: "to check description and performance of this bot"
+        description: "The Bot's secret control panel. What's your command, oh great one?"
       },
       {
         id: ".groupmenu",
         title: "Group Menu",
-        description: "Special features in group chats only"
+        description: "Group shenanigans central! Unite, chat, conquer!"
       },
       {
         id: ".funmenu",
         title: "Fun Menu",
-        description: "Contains Jokes"
+        description: "The bot's party hat. Games, jokes and instant ROFLs. Let's get this party started!"
       },
       {
         id: ".reactionmenu",
@@ -637,27 +637,27 @@ const handler = async (m, {
       {
         id: ".dlmenu",
         title: "Downloader Menu",
-        description: "download site content, social media and cloud storage via WhatsApp"
+        description: "'DL' stands for 'Delicious Loot'. Come grab your goodies!"
       },
       {
         id: ".gamemenu",
         title: "Game Menu",
-        description: "suitable for use in group chats"
+        description: "Enter the gaming arena. May the odds be ever in your favor!"
       },
       {
         id: ".economymenu",
         title: "Economy Menu",
-        description: "supporting features in the game menu, suitable for use in group chats"
+        description: "Bling bling! Your personal vault of virtual economy. Spend or save? Choose wisely!"
       },
       {
-        id: ".canvasmenu",
-        title: "Canvas Menu",
-        description: "suitable for use in group chats"
+        id: ".logomenu",
+        title: "Logo Menu",
+        description: "Create a logo that screams YOU. Or whispers. You choose the volume."
       },
       {
         id: ".stickermenu",
         title: "Sticker Menu",
-        description: "create, edit, convert and compress stickers"
+        description: "A rainbow of stickers for your inner artist. Make your chats pop!"
       },
       {
         id: ".audiomenu",
@@ -677,12 +677,12 @@ const handler = async (m, {
       {
         id: ".nsfwmenu",
         title: "NSFW Menu",
-        description: "18+ Only"
+        description: "The After Dark menu. But remember, sharing adult secrets must be consent-based."
       },
       {
-        id: ".toolsmenu",
+        id: ".toolmenu",
         title: "Tools Menu",
-        description: "Random Tools"
+        description: "Your handy-dandy toolkit. What's your pick, genius?"
       },
       {
         id: ".aimenu",
