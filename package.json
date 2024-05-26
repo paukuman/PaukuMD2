@@ -19,7 +19,8 @@
         "node": ">=20.0.0"
     },
     "scripts": {
-        "start": "nodemon index.js",
+        "start": "node index.js",
+        "nodemon": "nodemon index.js",
         "test": "node test.js"
     },
     "keywords": [
