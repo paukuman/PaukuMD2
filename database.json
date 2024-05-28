@@ -1,8 +1,8 @@
 {
   "users": {
     "6287854791914@s.whatsapp.net": {
-      "exp": 1316,
-      "credit": 0,
+      "exp": 120002178,
+      "credit": 1099999998,
       "bank": 0,
       "chicken": 0,
       "lastclaim": 0,
@@ -14,12 +14,12 @@
       "afkReason": "",
       "banned": false,
       "warn": 0,
-      "level": 0,
-      "role": "Tadpole",
-      "autolevelup": false
+      "level": 264,
+      "role": "🔱 Emperor of the Seven Seas 🔱",
+      "autolevelup": true
     },
     "6285706211198@s.whatsapp.net": {
-      "exp": 282,
+      "exp": 500,
       "credit": 0,
       "bank": 0,
       "chicken": 0,
@@ -37,7 +37,7 @@
       "autolevelup": false
     },
     "6283863362413@s.whatsapp.net": {
-      "exp": 75,
+      "exp": 99,
       "credit": 0,
       "bank": 0,
       "chicken": 0,
@@ -55,7 +55,7 @@
       "autolevelup": false
     },
     "6282336596303@s.whatsapp.net": {
-      "exp": 973,
+      "exp": 1312,
       "credit": 0,
       "bank": 0,
       "chicken": 0,
@@ -73,7 +73,7 @@
       "autolevelup": false
     },
     "6283127568509@s.whatsapp.net": {
-      "exp": 107,
+      "exp": 109,
       "credit": 0,
       "bank": 0,
       "chicken": 0,
@@ -163,7 +163,7 @@
       "autolevelup": false
     },
     "6285723165587@s.whatsapp.net": {
-      "exp": 42,
+      "exp": 623,
       "credit": 0,
       "bank": 0,
       "chicken": 0,
@@ -215,6 +215,96 @@
       "level": 0,
       "role": "Tadpole",
       "autolevelup": false
+    },
+    "6285339822606@s.whatsapp.net": {
+      "exp": 30,
+      "credit": 0,
+      "bank": 0,
+      "chicken": 0,
+      "lastclaim": 0,
+      "registered": false,
+      "name": "リタ・ロスヴァイセ",
+      "age": -1,
+      "regTime": -1,
+      "afk": -1,
+      "afkReason": "",
+      "banned": false,
+      "warn": 0,
+      "level": 0,
+      "role": "Tadpole",
+      "autolevelup": false
+    },
+    "6287847694305@s.whatsapp.net": {
+      "exp": 127,
+      "credit": 0,
+      "bank": 0,
+      "chicken": 0,
+      "lastclaim": 0,
+      "registered": false,
+      "name": "bmbng",
+      "age": -1,
+      "regTime": -1,
+      "afk": -1,
+      "afkReason": "",
+      "banned": false,
+      "warn": 0,
+      "level": 0,
+      "role": "Tadpole",
+      "autolevelup": false
+    },
+    "6285737469995@s.whatsapp.net": {
+      "exp": 34,
+      "credit": 0,
+      "bank": 0,
+      "chicken": 0,
+      "lastclaim": 0,
+      "registered": false,
+      "name": "Evelynn",
+      "age": -1,
+      "regTime": -1,
+      "afk": -1,
+      "afkReason": "",
+      "banned": false,
+      "warn": 0,
+      "level": 0,
+      "role": "Tadpole",
+      "autolevelup": false
+    },
+    "6288217624459@s.whatsapp.net": {
+      "exp": 18,
+      "credit": 0,
+      "bank": 0,
+      "chicken": 0,
+      "lastclaim": 0,
+      "registered": false,
+      "name": "Wardatur Rahmi",
+      "age": -1,
+      "regTime": -1,
+      "afk": -1,
+      "afkReason": "",
+      "banned": false,
+      "warn": 0,
+      "level": 0,
+      "role": "Tadpole",
+      "autolevelup": false
+    },
+    "6285814032179@s.whatsapp.net": {
+      "exp": 13,
+      "credit": 0,
+      "bank": 0,
+      "chicken": 0,
+      "lastclaim": 0,
+      "registered": false,
+      "name": "Asumi",
+      "age": -1,
+      "regTime": -1,
+      "afk": -1,
+      "afkReason": "",
+      "banned": false,
+      "warn": 0,
+      "level": 0,
+      "role": "Tadpole",
+      "autolevelup": false
     }
   },
   "chats": {
@@ -238,7 +328,8 @@
       "viewOnce": false,
       "viewStory": false,
       "welcome": false,
-      "chatbot": false
+      "chatbot": true,
+      "autotype": true
     },
     "6285706211198@s.whatsapp.net": {
       "antiDelete": true,
@@ -459,6 +550,50 @@
       "viewStory": false,
       "welcome": false,
       "chatbot": false
+    },
+    "6285723165587@s.whatsapp.net": {
+      "antiDelete": true,
+      "antiLink": false,
+      "antiSticker": false,
+      "antiToxic": false,
+      "detect": false,
+      "expired": 0,
+      "getmsg": true,
+      "isBanned": false,
+      "nsfw": false,
+      "sBye": "",
+      "sDemote": "",
+      "simi": false,
+      "sPromote": "",
+      "sticker": false,
+      "sWelcome": "",
+      "useDocument": false,
+      "viewOnce": false,
+      "viewStory": false,
+      "welcome": false,
+      "chatbot": false
+    },
+    "6285737469995@s.whatsapp.net": {
+      "antiDelete": true,
+      "antiLink": false,
+      "antiSticker": false,
+      "antiToxic": false,
+      "detect": false,
+      "expired": 0,
+      "getmsg": true,
+      "isBanned": false,
+      "nsfw": false,
+      "sBye": "",
+      "sDemote": "",
+      "simi": false,
+      "sPromote": "",
+      "sticker": false,
+      "sWelcome": "",
+      "useDocument": false,
+      "viewOnce": false,
+      "viewStory": false,
+      "welcome": false,
+      "chatbot": false
     }
   },
   "stats": {
@@ -469,22 +604,22 @@
       "lastSuccess": 1716642590074
     },
     "dl-facebook.js": {
-      "total": 46,
-      "success": 44,
-      "last": 1716737949101,
-      "lastSuccess": 1716737949101
+      "total": 62,
+      "success": 59,
+      "last": 1716769899578,
+      "lastSuccess": 1716769899578
     },
     "main-menu.js": {
-      "total": 26,
-      "success": 25,
-      "last": 1716725825970,
-      "lastSuccess": 1716725825970
+      "total": 28,
+      "success": 27,
+      "last": 1716851398173,
+      "lastSuccess": 1716851398173
     },
     "main-list.js": {
-      "total": 5,
-      "success": 5,
-      "last": 1716664074563,
-      "lastSuccess": 1716664074563
+      "total": 10,
+      "success": 10,
+      "last": 1716851573510,
+      "lastSuccess": 1716851573510
     },
     "main-Guru.js": {
       "total": 2,
@@ -511,10 +646,58 @@
       "lastSuccess": 1716737574153
     },
     "dl-mega.js": {
-      "total": 4,
-      "success": 4,
-      "last": 1716739183966,
-      "lastSuccess": 1716739183966
+      "total": 8,
+      "success": 7,
+      "last": 1716909547608,
+      "lastSuccess": 1716909547608
+    },
+    "main-ping.js": {
+      "total": 2,
+      "success": 2,
+      "last": 1716850991212,
+      "lastSuccess": 1716850991212
+    },
+    "nsfw-list.js": {
+      "total": 2,
+      "success": 2,
+      "last": 1716851237023,
+      "lastSuccess": 1716851237023
+    },
+    "enable.js": {
+      "total": 5,
+      "success": 5,
+      "last": 1716851337469,
+      "lastSuccess": 1716851337469
+    },
+    "econ-give-gold.js": {
+      "total": 2,
+      "success": 2,
+      "last": 1716851636794,
+      "lastSuccess": 1716851636794
+    },
+    "econ-addxp.js": {
+      "total": 5,
+      "success": 3,
+      "last": 1716851711357,
+      "lastSuccess": 1716851711357
+    },
+    "econ-addGold.js": {
+      "total": 3,
+      "success": 3,
+      "last": 1716851754443,
+      "lastSuccess": 1716851754443
+    },
+    "gp-profile.js": {
+      "total": 2,
+      "success": 2,
+      "last": 1716851762288,
+      "lastSuccess": 1716851762288
+    },
+    "econ-leaderboard.js": {
+      "total": 2,
+      "success": 2,
+      "last": 1716851779386,
+      "lastSuccess": 1716851779386
     }
   },
   "msgs": {},

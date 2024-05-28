@@ -24,24 +24,25 @@ const handler = async (m, {
 
   try {
     const result = await fg.fbdl(args[0])
+    console.log(result)
+    
     const response = await fetch(result.videoUrl)
     // get filename
     const header = response.headers.get('Content-Disposition');
     const parts = header.split(';');
     const filename = parts[1].split('=')[1];
 
-    /*
     let res = await conn.sendLoader(m.chat, m, response, "FB Downloader", 500);
     const arrayBuffer = await res.arrayBuffer()
     const videoBuffer = Buffer.from(arrayBuffer)
-    */
+    
     const tex = `
 ─── [ Aoi FB Downloader ] ───
 
 ↳ *TITLE :* ${result.title}
 ↳ *SIZE  :* ${result.size}`
 
-    conn.sendFile(m.chat, result.videoUrl, filename, tex, m)
+    conn.sendFile(m.chat, videoBuffer, false, tex, m)
     m.react(done)
   } catch (error) {
     console.log(error)
