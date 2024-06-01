@@ -1,0 +1,42 @@
+0 info it worked if it ends with ok
+1 verbose cli [
+1 verbose cli   '/home/jona/.nvm/versions/node/v21.7.2/bin/node',
+1 verbose cli   '/home/jona/Documents/bot/PaukuMD2/node_modules/.bin/npm',
+1 verbose cli   'start'
+1 verbose cli ]
+2 info using npm@2.15.12
+3 info using node@v21.7.2
+4 verbose run-script [ 'prestart', 'start', 'poststart' ]
+5 info prestart guruai@2.1.0
+6 info start guruai@2.1.0
+7 verbose unsafe-perm in lifecycle true
+8 info guruai@2.1.0 Failed to exec start script
+9 verbose stack Error: guruai@2.1.0 start: `node index.js`
+9 verbose stack Exit status 1
+9 verbose stack     at EventEmitter.<anonymous> (/home/jona/Documents/bot/PaukuMD2/node_modules/npm/lib/utils/lifecycle.js:217:16)
+9 verbose stack     at EventEmitter.emit (node:events:519:28)
+9 verbose stack     at ChildProcess.<anonymous> (/home/jona/Documents/bot/PaukuMD2/node_modules/npm/lib/utils/spawn.js:24:14)
+9 verbose stack     at ChildProcess.emit (node:events:519:28)
+9 verbose stack     at maybeClose (node:internal/child_process:1105:16)
+9 verbose stack     at ChildProcess._handle.onexit (node:internal/child_process:305:5)
+10 verbose pkgid guruai@2.1.0
+11 verbose cwd /home/jona/Documents/bot/PaukuMD2
+12 error Linux 6.5.0-27-generic
+13 error argv "/home/jona/.nvm/versions/node/v21.7.2/bin/node" "/home/jona/Documents/bot/PaukuMD2/node_modules/.bin/npm" "start"
+14 error node v21.7.2
+15 error npm  v2.15.12
+16 error code ELIFECYCLE
+17 error guruai@2.1.0 start: `node index.js`
+17 error Exit status 1
+18 error Failed at the guruai@2.1.0 start script 'node index.js'.
+18 error This is most likely a problem with the guruai package,
+18 error not with npm itself.
+18 error Tell the author that this fails on your system:
+18 error     node index.js
+18 error You can get information on how to open an issue for this project with:
+18 error     npm bugs guruai
+18 error Or if that isn't available, you can get their info via:
+18 error
+18 error     npm owner ls guruai
+18 error There is likely additional logging output above.
+19 verbose exit [ 1, true ]

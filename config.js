@@ -11,7 +11,7 @@ if (!ownervb) {
     throw new Error("OWNERS env is not set");
 }
 
-const ownerlist = ownervb.split(';');
+const ownerlist = ownervb.split(',');
 
 global.owner = [];
 for (let i = 0; i < ownerlist.length; i += 2) {
@@ -23,11 +23,11 @@ for (let i = 0; i < ownerlist.length; i += 2) {
     global.owner.push(owner);
 }
 
-//global.pairingNumber = "" //put your bot number here
+//global.pairingNumber = "6287854791914" //put your bot number here
 
-global.mods = ['917605902011', '32460248586']
-global.prems = ['917605902011', '32460248586', '919398758484']
-global.allowed = ['917605902011', '32460248586', '19152999993']
+global.mods = ['6287854791914','6282336596303']
+global.prems = ['6287854791914','6282336596303']
+global.allowed = ['6287854791914','6282336596303']
 global.keysZens = ['c2459db922', '37CC845916', '6fb0eff124']
 global.keysxxx = keysZens[Math.floor(keysZens.length * Math.random())]
 global.keysxteammm = [
@@ -75,7 +75,7 @@ global.botname = process.env.BOTNAME
 global.premium = 'true'
 global.packname = '𝐀𝐨𝐢 𝐌𝐃'
 global.author = 'ᴬᵒᶦ ᴹᴰ'
-global.menuvid = 'https://ia800403.us.archive.org/13/items/undefined-imgur_202405/PEPSI%20MAAAAAAN%21%20-%20Imgur.mp4'
+global.menuvid = 'https://ia902300.us.archive.org/34/items/tGOWVYV-ezgif.com-gif-to-mp4-converter/tGOWVYV-ezgif.com-gif-to-mp4-converter.mp4'
 global.igfg = '▢ Follow on Instagram\nhttps://www.instagram.com/paukuman\n'
 global.dygp = 'https://s.id/doujinlife'
 global.fgsc = 'https://github.com/paukuman'

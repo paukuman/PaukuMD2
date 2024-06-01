@@ -702,7 +702,7 @@ const handler = async (m, {
       {
         id: ".ownermenu",
         title: "Owner Menu",
-        description: "special features for Owner Only"
+        description: "The sacred scroll only for the chosen one. Yep, that's you, Boss!"
       },
     ]
   }])

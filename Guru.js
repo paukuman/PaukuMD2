@@ -10,6 +10,11 @@ import { fileURLToPath, pathToFileURL } from 'url'
 import * as ws from 'ws'
 import processTxtAndSaveCredentials from './lib/makesession.js'
 import clearTmp from './lib/tempclear.js'
+
+import { exec } from "child_process";
+
+
+
 global.__filename = function filename(pathURL = import.meta.url, rmPrefix = platform !== 'win32') {
   return rmPrefix
     ? /file:\/\/\//.test(pathURL)
