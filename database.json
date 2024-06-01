@@ -1,7 +1,7 @@
 {
   "users": {
     "6287854791914@s.whatsapp.net": {
-      "exp": 120002649,
+      "exp": 120002654,
       "credit": 1099999998,
       "bank": 0,
       "chicken": 0,
@@ -19,7 +19,7 @@
       "autolevelup": true
     },
     "6285706211198@s.whatsapp.net": {
-      "exp": 795,
+      "exp": 802,
       "credit": 0,
       "bank": 0,
       "chicken": 0,
@@ -235,7 +235,7 @@
       "autolevelup": false
     },
     "6287847694305@s.whatsapp.net": {
-      "exp": 157,
+      "exp": 166,
       "credit": 0,
       "bank": 0,
       "chicken": 0,
@@ -379,7 +379,7 @@
       "autolevelup": false
     },
     "6282147321890@s.whatsapp.net": {
-      "exp": 66,
+      "exp": 106,
       "credit": 0,
       "bank": 0,
       "chicken": 0,
@@ -433,7 +433,7 @@
       "autolevelup": false
     },
     "6285184134712@s.whatsapp.net": {
-      "exp": 1516,
+      "exp": 1706,
       "credit": 2000,
       "bank": 0,
       "chicken": 0,
@@ -469,7 +469,7 @@
       "autolevelup": false
     },
     "628127007426@s.whatsapp.net": {
-      "exp": 9,
+      "exp": 18,
       "credit": 0,
       "bank": 0,
       "chicken": 0,
@@ -1079,10 +1079,10 @@
       "lastSuccess": 1717118681342
     },
     "pauku_samehada.js": {
-      "total": 55,
-      "success": 52,
-      "last": 1717222518233,
-      "lastSuccess": 1717222518233
+      "total": 61,
+      "success": 58,
+      "last": 1717241115470,
+      "lastSuccess": 1717241115470
     },
     "fun-alexa.js": {
       "total": 2,
