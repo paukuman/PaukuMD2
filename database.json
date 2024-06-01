@@ -19,7 +19,7 @@
       "autolevelup": true
     },
     "6285706211198@s.whatsapp.net": {
-      "exp": 802,
+      "exp": 858,
       "credit": 0,
       "bank": 0,
       "chicken": 0,
@@ -163,7 +163,7 @@
       "autolevelup": false
     },
     "6285723165587@s.whatsapp.net": {
-      "exp": 728,
+      "exp": 737,
       "credit": 0,
       "bank": 0,
       "chicken": 0,
@@ -253,7 +253,7 @@
       "autolevelup": false
     },
     "6285737469995@s.whatsapp.net": {
-      "exp": 100000146,
+      "exp": 100000160,
       "credit": 0,
       "bank": 0,
       "chicken": 0,
@@ -433,7 +433,7 @@
       "autolevelup": false
     },
     "6285184134712@s.whatsapp.net": {
-      "exp": 1725,
+      "exp": 1769,
       "credit": 2000,
       "bank": 0,
       "chicken": 0,
@@ -1121,9 +1121,9 @@
       "lastSuccess": 1717168035814
     },
     "pauku_pixeldrain.js": {
-      "total": 12,
+      "total": 14,
       "success": 8,
-      "last": 1717242536212,
+      "last": 1717243352709,
       "lastSuccess": 1717242536212
     }
   },
