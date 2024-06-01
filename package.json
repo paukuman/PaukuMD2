@@ -19,7 +19,7 @@
         "node": ">=20.0.0"
     },
     "scripts": {
-        "start": "pm2 start index.js --watch --ignore-watch=\"./sessions ./session ./.cache ./*.json ./*.tmp ./tmp ./.git\" && pm2 logs",
+        "start": "pm2 start index.js --watch --ignore-watch=\"./sessions ./session ./.cache ./*.json ./*.tmp ./tmp/* ./.git/*\" && pm2 logs",
         "test": "node test.js"
     },
     "keywords": [
