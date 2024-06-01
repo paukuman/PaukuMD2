@@ -433,7 +433,7 @@
       "autolevelup": false
     },
     "6285184134712@s.whatsapp.net": {
-      "exp": 1706,
+      "exp": 1725,
       "credit": 2000,
       "bank": 0,
       "chicken": 0,
@@ -1121,10 +1121,10 @@
       "lastSuccess": 1717168035814
     },
     "pauku_pixeldrain.js": {
-      "total": 11,
-      "success": 7,
-      "last": 1717221948636,
-      "lastSuccess": 1717221296600
+      "total": 12,
+      "success": 8,
+      "last": 1717242536212,
+      "lastSuccess": 1717242536212
     }
   },
   "msgs": {},
