@@ -89,12 +89,12 @@ async function start(file) {
     if (code === 0) {
       start('Guru.js')
       return
-    } else {
-      fs.watchFile(args[0], () => {
-        fs.unwatchFile(args[0])
-        start('Guru.js')
-      })
     }
+
+    fs.watchFile(args[0], () => {
+      fs.unwatchFile(args[0])
+      start('Guru.js')
+    })
   })
 
   p.on('error', err => {
