@@ -86,15 +86,15 @@ async function start(file) {
   p.on('exit', code => {
     isRunning = false
     console.error(chalk.red(`❌Exited with code: ${code}`))
+    start('Guru.js')
     if (code === 0) {
-      start('Guru.js')
       return
     }
 
-    fs.watchFile(args[0], () => {
+    /*fs.watchFile(args[0], () => {
       fs.unwatchFile(args[0])
       start('Guru.js')
-    })
+    })*/
   })
 
   p.on('error', err => {
