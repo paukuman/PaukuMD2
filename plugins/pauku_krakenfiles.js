@@ -91,7 +91,7 @@ let handler = async (m, {
 
         m.reply(`Bentar ya bang, lagi di Unduh...`);
         const response = await fetch(url)
-        let res = await conn.sendLoader(m.chat, m, response, "FB Downloader", 500);
+        let res = await conn.sendLoader(m.chat, m, response, "Krakenfiles Downloader", 500);
         const arrayBuffer = await res.arrayBuffer()
         const videoBuffer = Buffer.from(arrayBuffer)
 

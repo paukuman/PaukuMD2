@@ -1,14 +1,17 @@
 import chalk from 'chalk'
-import { spawn } from 'child_process'
+import {
+  spawn
+} from 'child_process'
 import express from 'express'
 import figlet from 'figlet'
 import fs from 'fs'
 import path from 'path'
-import { fileURLToPath } from 'url';
+import {
+  fileURLToPath
+} from 'url';
 
 figlet(
-  'AOI MD',
-  {
+  'AOI MD', {
     font: 'Ghost',
     horizontalLayout: 'default',
     verticalLayout: 'default',
@@ -23,8 +26,7 @@ figlet(
 )
 
 figlet(
-  'Advanced Whatsapp Bot',
-  {
+  'Advanced Whatsapp Bot', {
     horizontalLayout: 'default',
     verticalLayout: 'default',
   },
@@ -40,7 +42,8 @@ figlet(
 const app = express()
 const port = process.env.PORT || 8080
 
-const __filename = fileURLToPath(import.meta.url);
+const __filename = fileURLToPath(
+  import.meta.url);
 const __dirname = path.dirname(__filename);
 
 app.use(express.static(path.join(__dirname, 'Assets')));
@@ -59,7 +62,8 @@ async function start(file) {
   if (isRunning) return
   isRunning = true
 
-  const currentFilePath = new URL(import.meta.url).pathname
+  const currentFilePath = new URL(
+    import.meta.url).pathname
   const args = [path.join(path.dirname(currentFilePath), file), ...process.argv.slice(2)]
   const p = spawn(process.argv[0], args, {
     stdio: ['inherit', 'inherit', 'inherit', 'ipc'],
@@ -82,14 +86,15 @@ async function start(file) {
   p.on('exit', code => {
     isRunning = false
     console.error(chalk.red(`❌Exited with code: ${code}`))
-
-    start('Guru.js') 
-    if (code === 0) return
-
-    fs.watchFile(args[0], () => {
-      fs.unwatchFile(args[0])
-      start('Guru.js') 
-    })
+    if (code === 0) {
+      start('Guru.js')
+      return
+    } else {
+      fs.watchFile(args[0], () => {
+        fs.unwatchFile(args[0])
+        start('Guru.js')
+      })
+    }
   })
 
   p.on('error', err => {
@@ -109,7 +114,9 @@ async function start(file) {
     console.log(chalk.yellow(`Installed ${files.length} plugins`))
 
     try {
-      const { default: baileys } = await import('@whiskeysockets/baileys')
+      const {
+        default: baileys
+      } = await import('@whiskeysockets/baileys')
       const version = (await baileys.fetchLatestBaileysVersion()).version
       console.log(chalk.yellow(`Using Baileys version ${version}`))
     } catch (e) {
