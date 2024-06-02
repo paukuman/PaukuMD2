@@ -19,7 +19,7 @@
       "autolevelup": true
     },
     "6285706211198@s.whatsapp.net": {
-      "exp": 858,
+      "exp": 890,
       "credit": 0,
       "bank": 0,
       "chicken": 0,
@@ -433,15 +433,15 @@
       "autolevelup": false
     },
     "6285184134712@s.whatsapp.net": {
-      "exp": 1769,
+      "exp": 3570,
       "credit": 2000,
       "bank": 0,
       "chicken": 0,
       "lastclaim": 1717136088111,
-      "registered": false,
-      "name": "「 Devvaaaa 」‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ ͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏ ͏͏͏͏",
-      "age": -1,
-      "regTime": -1,
+      "registered": true,
+      "name": "depp",
+      "age": 21,
+      "regTime": 1717281799453,
       "afk": -1,
       "afkReason": "",
       "banned": false,
@@ -917,7 +917,7 @@
       "expired": 0,
       "getmsg": true,
       "isBanned": false,
-      "nsfw": false,
+      "nsfw": true,
       "sBye": "",
       "sDemote": "",
       "simi": false,
@@ -1043,10 +1043,10 @@
       "lastSuccess": 1716851237023
     },
     "enable.js": {
-      "total": 15,
-      "success": 8,
-      "last": 1717214419586,
-      "lastSuccess": 1717214419586
+      "total": 16,
+      "success": 9,
+      "last": 1717281717319,
+      "lastSuccess": 1717281717319
     },
     "econ-give-gold.js": {
       "total": 2,
@@ -1079,10 +1079,10 @@
       "lastSuccess": 1717118681342
     },
     "pauku_samehada.js": {
-      "total": 61,
-      "success": 58,
-      "last": 1717241115470,
-      "lastSuccess": 1717241115470
+      "total": 90,
+      "success": 87,
+      "last": 1717289976396,
+      "lastSuccess": 1717289976396
     },
     "fun-alexa.js": {
       "total": 2,
@@ -1097,10 +1097,10 @@
       "lastSuccess": 1717040288008
     },
     "rg-register.js": {
-      "total": 3,
-      "success": 3,
-      "last": 1717040179367,
-      "lastSuccess": 1717040179367
+      "total": 6,
+      "success": 4,
+      "last": 1717281799454,
+      "lastSuccess": 1717281799454
     },
     "econ-slot.js": {
       "total": 2,
@@ -1125,6 +1125,24 @@
       "success": 8,
       "last": 1717243352709,
       "lastSuccess": 1717242536212
+    },
+    "Guru-hentai.js": {
+      "total": 5,
+      "success": 0,
+      "last": 1717281819080,
+      "lastSuccess": 0
+    },
+    "pauku_misuh.js": {
+      "total": 2,
+      "success": 2,
+      "last": 1717282617690,
+      "lastSuccess": 1717282617690
+    },
+    "pauku_krakenfiles.js": {
+      "total": 30,
+      "success": 17,
+      "last": 1717291969827,
+      "lastSuccess": 1717291969827
     }
   },
   "msgs": {},

@@ -3,40 +3,51 @@ import {
     File
 } from 'megajs'
 import path from 'path'
+import { arch } from 'process';
 
 
 const {
     JSDOM
 } = jsdom;
 
-let handler = async (m, {
-    conn,
-    args,
-    usedPrefix,
-    text,
-    command
-}) => {
+let handler = async (m, all) => {
+    const {
+        conn,
+        args,
+        usedPrefix,
+        text,
+        command
+    } = all
+    all.m = m;
     try {
         if (text) {
             switch (args[0]) {
                 case "update":
-                    return await getUpdates(conn, m);
+                    return await getUpdates(all);
                     break;
 
+                case "anime":
+                    return await getAnime(all);
+                    break;
                 case "search":
-                    return await searchAnime(conn, m);
+
+                    return await conn.sendButton(m.chat, `Ambatukam : "Bang gimana caranya nyari judul di fitur samehada? mw nnton anime hitam"\n\nOwner Ganteng : \nCaranya tu gini deck,\nketik .samehada <judul animeknya>\n\nmisal nih ya..\n.samehada Overflow`, author, 'https://telegra.ph/file/3c841d3a633f724d5e650.jpg', [
+                        ['Halah ribet, Owner Kontol', `.misuh`]
+                    ], null, [
+                        ['Oh gitu ya bang, Makasi bang', `https://s.id/doujinlife`]
+                    ], m)
                     break;
 
                 case "jadwal":
-                    return await jadwalAnime(conn, m);
+                    return await jadwalAnime(all);
                     break;
 
                 case "list":
-                    return await listAnime(conn, m);
+                    return await listAnime(all);
                     break;
 
                 default:
-                    return await downloadAnime(conn, m, args);
+                    return await downloadAnime(all);
                     break;
             }
         }
@@ -48,19 +59,19 @@ let handler = async (m, {
         conn.sendList(m.chat, "Samehadaku Menu", `\n\nDownload Anime Subtitle Indonesia`, "Menu Samehada", await waifuPics(), [{
             title: "Main Menu",
             rows: [{
-                id: ".samehada update",
+                id: `${usedPrefix + command} update`,
                 title: "Update Terbaru",
                 description: "Menampilkan Episode yang baru dirilis."
             }, {
-                id: ".samehada search",
+                id: `${usedPrefix + command} search`,
                 title: "Cari Anime",
                 description: "langkah2 untuk mencari anime."
             }, {
-                id: ".samehada jadwal",
+                id: `${usedPrefix + command} jadwal`,
                 title: "Jadwal Anime Ongoing",
                 description: "Menampilkan daftar anime Ongoing + jadwal rilisnya."
             }, {
-                id: ".samehada list",
+                id: `${usedPrefix + command} list`,
                 title: "Daftar Anime",
                 description: "Menampilkan Daftar Anime menurut Abjad/Alphabet."
             }]
@@ -81,13 +92,95 @@ async function waifuPics() {
     return res_pic ?.url;
 }
 
-async function searchAnime(conn, m, args) {}
+async function getAnime({
+    m,
+    conn,
+    args,
+    usedPrefix,
+    text,
+    command
+}) {
+    if(isValidUrl(args[1])) {
+        const get = await fetch(args[1]);
+        const res = await get.text();
+        const {
+            document
+        } = (new JSDOM(res)).window;
+        const title = document.querySelector(".entry-title").textContent.trim();
+        const img = document.querySelector("img.anmsa").src;
+        const desc = document.querySelector(".desc .entry-content.entry-content-single").textContent.trim();
+        const score = document.querySelector("span[itemprop='ratingValue']").textContent.trim();
+        const genres = [...document.querySelectorAll(".genre-info a")].map(e => {
+            return e.textContent.trim();
+        }).join(", ");
 
-async function listAnime(conn, m, args) {}
+        const epss = [...document.querySelectorAll(".lstepsiode.listeps ul li")].map(e => {
+            const title = e.querySelector("span.lchx").textContent.trim();
+            const url = e.querySelector("span a").href;
+            const date = e.querySelector(".date").textContent.trim();
 
-async function jadwalAnime(conn, m, args) {}
+            return {
+                id: `${usedPrefix + command} ${url}`,
+                title,
+                description: date
+            }
+        })
 
-async function downloadAnime(conn, m, args) {
+
+    conn.sendList(m.chat, "Samehadaku Anime Info", `${title}\n - score : ${score}\n - genres : ${genres}\n - sinopsis : \n${desc}`, `Pilih Episode (${epss.length} Eps)`, img, [{
+        title: "Hasil Pencarian",
+        rows: epss
+    }])
+    }
+}
+
+async function searchAnime({
+    m,
+    conn,
+    args,
+    usedPrefix,
+    text,
+    command
+}) {
+    const get = await fetch(`https://samehadaku.email/?s=${text}`);
+    const res = await get.text();
+    const {
+        document
+    } = (new JSDOM(res)).window;
+    const getlists = [...document.querySelectorAll(".site-main.relat .animpost")]
+    const lists = getlists.map(e => {
+        const type = e.querySelector(".content-thumb .type").textContent.trim();
+        const score = e.querySelector(".score").textContent.trim();
+        const title = e.querySelector(".title h2").textContent.trim();
+        const status = e.querySelector(".data .type").textContent.trim();
+        const url = e.querySelector("a").href;
+
+        return {
+            id: `${usedPrefix + command} anime ${url}`,
+            title,
+            description: `⭐ ${score} ⦾ ${type} ⦾ ${status}`
+        }
+    })
+
+    conn.sendList(m.chat, "Samehadaku Search", `\nHasil Pencarian dari *${text}*`, `Lihat (${getlists.length} postingan)`, `https://telegra.ph/file/eb52f1e3acbd4e5f4f935.jpg`, [{
+        title: "Hasil Pencarian",
+        rows: lists
+    }])
+}
+
+async function listAnime(all) {}
+
+async function jadwalAnime(all) {}
+
+async function downloadAnime(all) {
+    const {
+        m,
+        conn,
+        args,
+        usedPrefix,
+        text,
+        command
+    } = all;
     if (isValidUrl(args[0])) {
         const updates = await fetch(args[0]);
         const text = await updates.text();
@@ -102,7 +195,7 @@ async function downloadAnime(conn, m, args) {
             const list = [...e.querySelectorAll("ul li")];
 
             let dl = [];
-            for(let f of list) {
+            for (let f of list) {
                 let span = [...f.querySelectorAll("span")];
                 const quality = f.querySelector("strong").textContent;
                 for (let s of span) {
@@ -123,6 +216,8 @@ async function downloadAnime(conn, m, args) {
         })
 
         conn.sendList(m.chat, "Samehadaku Download", `\n${posttitle}\n`, "Download List", await waifuPics(), getdls)
+    } else {
+        return await searchAnime(all);
     }
 }
 
@@ -135,7 +230,13 @@ const isValidUrl = urlString => {
         '(\\#[-a-z\\d_]*)?$', 'i'); // validate fragment locator
     return !!urlPattern.test(urlString);
 }
-async function getUpdates(conn, m) {
+async function getUpdates({
+    m,
+    conn,
+    args,
+    usedPrefix,
+    command
+}) {
 
     const updates = await fetch("https://samehadaku.email");
     const text = await updates.text();
