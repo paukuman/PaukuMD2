@@ -78,11 +78,11 @@ let handler = async (m, {
             }
         }
 
-        /*m.reply(`Bentar ya bang, lagi di Unduh...`);
+        m.reply(`Bentar ya bang, lagi di Unduh...`);
         const response = await fetch(url)
         let res = await conn.sendLoader(m.chat, m, response, "FB Downloader", 500);
         const arrayBuffer = await res.arrayBuffer()
-        const videoBuffer = Buffer.from(arrayBuffer)*/
+        const videoBuffer = Buffer.from(arrayBuffer)
 
         await m.reply(`Bentar ya bang, lagi di Upload...`);
         await conn.sendFile(m.chat, url, filename, '', m, null, {

@@ -83,11 +83,12 @@ async function start(file) {
     isRunning = false
     console.error(chalk.red(`❌Exited with code: ${code}`))
 
-    //if (code === 0) return
+    start('Guru.js') 
+    if (code === 0) return
 
     fs.watchFile(args[0], () => {
       fs.unwatchFile(args[0])
-      start('Guru.js')
+      start('Guru.js') 
     })
   })
 
