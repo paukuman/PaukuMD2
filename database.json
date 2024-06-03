@@ -433,7 +433,7 @@
       "autolevelup": false
     },
     "6285184134712@s.whatsapp.net": {
-      "exp": 3691,
+      "exp": 3734,
       "credit": 2000,
       "bank": 0,
       "chicken": 0,
@@ -989,10 +989,10 @@
       "lastSuccess": 1716769899578
     },
     "main-menu.js": {
-      "total": 48,
-      "success": 44,
-      "last": 1717221816519,
-      "lastSuccess": 1717221816519
+      "total": 49,
+      "success": 45,
+      "last": 1717422054630,
+      "lastSuccess": 1717422054630
     },
     "main-list.js": {
       "total": 17,
@@ -1139,10 +1139,10 @@
       "lastSuccess": 1717282617690
     },
     "pauku_krakenfiles.js": {
-      "total": 33,
-      "success": 20,
-      "last": 1717292969714,
-      "lastSuccess": 1717292969714
+      "total": 34,
+      "success": 21,
+      "last": 1717422087968,
+      "lastSuccess": 1717422087968
     }
   },
   "msgs": {},

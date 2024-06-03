@@ -31,6 +31,9 @@ let handler = async (m, {
                 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36'
             }
         });
+
+        const token_headers = get_token.headers;
+
         const res_token = await get_token.text()
         const {
             document
@@ -61,11 +64,14 @@ let handler = async (m, {
         let get_dl_url = await fetch(url_api, {
             method: "POST",
             body: formBody,
-            referrer: 'https://krakenfiles.com',
+            referer: 'https://krakenfiles.com/',
             headers: {
-                'Access-Control-Allow-Origin': 'https://krakenfiles.com',
+                'Access-Control-Allow-Origin': 'https://krakenfiles.com/',
                 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
-                "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+                "Content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+                'Set-Cookie': token_headers.get("set-cookie"),
+                Cookie: token_headers.get("set-cookie"),
+                'Cache-Control': token_headers.get("cache-control")
             }
         })
         const json_api = await get_dl_url.json();
@@ -89,11 +95,23 @@ let handler = async (m, {
             }
         }
 
-        /*m.reply(`Bentar ya bang, lagi di Unduh...`);
-        const response = await fetch(url)
+        let videoBuffer = url;
+
+        m.reply(`Bentar ya bang, lagi di Unduh...`);
+        const response = await fetch(url, {
+            referer: 'https://krakenfiles.com/',
+            headers: {
+                'Access-Control-Allow-Origin': 'https://krakenfiles.com/',
+                'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+                "Content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+                'Set-Cookie': token_headers.get("set-cookie"),
+                Cookie: token_headers.get("set-cookie"),
+                'Cache-Control': token_headers.get("cache-control")
+            }
+        })
         let res = await conn.sendLoader(m.chat, m, response, "Krakenfiles Downloader", 500);
         const arrayBuffer = await res.arrayBuffer()
-        const videoBuffer = Buffer.from(arrayBuffer)*/
+        videoBuffer = Buffer.from(arrayBuffer)
 
         await m.reply(`Bentar ya bang, lagi di Upload...`);
         await conn.sendFile(m.chat, videoBuffer, filename, '', m, null, {
