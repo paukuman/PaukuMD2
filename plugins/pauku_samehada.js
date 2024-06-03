@@ -126,7 +126,7 @@ async function getAnime({
                 title,
                 description: date
             }
-        })
+        }).filter(e => e);
 
 
         conn.sendList(m.chat, "Samehadaku Anime Info", `${title}\n - score : ${score}\n - genres : ${genres}\n - sinopsis : \n${desc}`, `Pilih Episode (${epss.length} Eps)`, img, [{
@@ -172,7 +172,47 @@ async function searchAnime({
 
 async function listAnime(all) {}
 
-async function jadwalAnime(all) {}
+async function jadwalAnime(all) {
+    const {
+        m,
+        conn,
+        args,
+        usedPrefix,
+        text,
+        command
+    } = all;
+    const days = {
+        "Sunday" : "Minggu",
+        "Monday" : "Senin",
+        "Tuesday" : "Selasa",
+        "Wednesday" : "Rabu",
+        "Thursday" : "Kamis",
+        "Friday" : "Jumat",
+        "Saturday" : "Sabtu"
+    }
+    const get_key = Object.keys(days);
+
+    const fetch_all = get_key.map(async e => {
+        const get_val = await fetch(`https://samehadaku.email/wp-json/custom/v1/all-schedule?day=${e.toLowerCase()}&type=schtml`);
+        const res_val = await get_val.json();
+        const rows = res_val.map(d => {
+            return {
+                id: `${usedPrefix + command} anime ${d.url}`,
+                title: d.title,
+                description: `${d.east_time} WIB`
+            }
+        })
+
+        return {
+            title : days[e],
+            rows
+        }
+    })
+
+    Promise.all(fetch_all).then(async function(results) {
+        conn.sendList(m.chat, "Jadwal Samehadaku", ``, "Lihat Jadwal", await waifuPics(), results)
+    })
+}
 
 async function downloadAnime(all) {
     const {
@@ -201,13 +241,15 @@ async function downloadAnime(all) {
                 let span = [...f.querySelectorAll("span")];
                 const quality = f.querySelector("strong").textContent;
                 for (let s of span) {
-                    const url = s.querySelector("a").href;
-                    const title = s.querySelector("a").textContent;
-                    dl.push({
-                        id: `.${get_prefix_link(url)} ${url}`,
-                        title,
-                        description: quality
-                    })
+                    const url = s.querySelector("a")?.href;
+                    const title = s.querySelector("a")?.textContent;
+                    if(url) {
+                        dl.push({
+                            id: `.${get_prefix_link(url)} ${url}`,
+                            title,
+                            description: quality
+                        })
+                    }
                 }
             }
 
@@ -254,7 +296,7 @@ async function getUpdates({
         let anime_span = get_all[i].querySelectorAll(".dtla span");
         let anime_desc = `${[...anime_span][0].textContent} - ${[...anime_span][2].textContent.replace("Released on:","").trim()}`;
         send_list_rows.push({
-            id: `.samehada ${anime_url}`,
+            id: `${usedPrefix + command} ${anime_url}`,
             title: anime_title,
             description: anime_desc
         })
