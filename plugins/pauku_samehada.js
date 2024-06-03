@@ -3,7 +3,9 @@ import {
     File
 } from 'megajs'
 import path from 'path'
-import { arch } from 'process';
+import {
+    arch
+} from 'process';
 
 
 const {
@@ -100,7 +102,7 @@ async function getAnime({
     text,
     command
 }) {
-    if(isValidUrl(args[1])) {
+    if (isValidUrl(args[1])) {
         const get = await fetch(args[1]);
         const res = await get.text();
         const {
@@ -127,10 +129,10 @@ async function getAnime({
         })
 
 
-    conn.sendList(m.chat, "Samehadaku Anime Info", `${title}\n - score : ${score}\n - genres : ${genres}\n - sinopsis : \n${desc}`, `Pilih Episode (${epss.length} Eps)`, img, [{
-        title: "Hasil Pencarian",
-        rows: epss
-    }])
+        conn.sendList(m.chat, "Samehadaku Anime Info", `${title}\n - score : ${score}\n - genres : ${genres}\n - sinopsis : \n${desc}`, `Pilih Episode (${epss.length} Eps)`, img, [{
+            title: "Hasil Pencarian",
+            rows: epss
+        }])
     }
 }
 
@@ -202,7 +204,7 @@ async function downloadAnime(all) {
                     const url = s.querySelector("a").href;
                     const title = s.querySelector("a").textContent;
                     dl.push({
-                        id: `.${title.toLowerCase()} ${url}`,
+                        id: `.${get_prefix_link(url)} ${url}`,
                         title,
                         description: quality
                     })
@@ -263,6 +265,20 @@ async function getUpdates({
         title: "Latest Update",
         rows: send_list_rows
     }])
+}
+
+function get_prefix_link(url) {
+    const {
+        hostname
+    } = new URL(url)
+    const prefixs = {
+        "gofile.io": "gofile",
+        "krakenfiles.com": "krakenfiles",
+        "acefile.co": "acefile",
+        "pixeldrain.com": "pixeldrain",
+        "www.mediafire.com": "mediafire"
+    }
+    return prefixs[hostname]?prefixs[hostname]:"";
 }
 
 function formatBytes(bytes) {

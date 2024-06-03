@@ -19,7 +19,7 @@
       "autolevelup": true
     },
     "6285706211198@s.whatsapp.net": {
-      "exp": 890,
+      "exp": 949,
       "credit": 0,
       "bank": 0,
       "chicken": 0,
@@ -181,7 +181,7 @@
       "autolevelup": false
     },
     "628972172668@s.whatsapp.net": {
-      "exp": 83,
+      "exp": 147,
       "credit": 0,
       "bank": 0,
       "chicken": 0,
@@ -433,7 +433,7 @@
       "autolevelup": false
     },
     "6285184134712@s.whatsapp.net": {
-      "exp": 3734,
+      "exp": 3941,
       "credit": 2000,
       "bank": 0,
       "chicken": 0,
@@ -476,6 +476,24 @@
       "lastclaim": 0,
       "registered": false,
       "name": "0",
+      "age": -1,
+      "regTime": -1,
+      "afk": -1,
+      "afkReason": "",
+      "banned": false,
+      "warn": 0,
+      "level": 0,
+      "role": "Tadpole",
+      "autolevelup": false
+    },
+    "6281351823471@s.whatsapp.net": {
+      "exp": 25,
+      "credit": 0,
+      "bank": 0,
+      "chicken": 0,
+      "lastclaim": 0,
+      "registered": false,
+      "name": "Nikki",
       "age": -1,
       "regTime": -1,
       "afk": -1,
@@ -1079,10 +1097,10 @@
       "lastSuccess": 1717118681342
     },
     "pauku_samehada.js": {
-      "total": 92,
-      "success": 89,
-      "last": 1717293133177,
-      "lastSuccess": 1717293133177
+      "total": 98,
+      "success": 95,
+      "last": 1717427200671,
+      "lastSuccess": 1717427200671
     },
     "fun-alexa.js": {
       "total": 2,
@@ -1143,6 +1161,12 @@
       "success": 21,
       "last": 1717422087968,
       "lastSuccess": 1717422087968
+    },
+    "dl-mediafire.js": {
+      "total": 2,
+      "success": 0,
+      "last": 1717427175716,
+      "lastSuccess": 0
     }
   },
   "msgs": {},
