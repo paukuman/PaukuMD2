@@ -226,7 +226,6 @@ const connectionOptions = {
     level: 'fatal',
   }),
   printQRInTerminal: !pairingCode,
-  browser: ['chrome (linux)', '', ''],
   auth: {
     creds: state.creds,
     keys: makeCacheableSignalKeyStore(
@@ -237,8 +236,6 @@ const connectionOptions = {
       })
     ),
   },
-  markOnlineOnConnect: true,
-  generateHighQualityLinkPreview: true,
   getMessage: async key => {
     let jid = jidNormalizedUser(key.remoteJid)
     let msg = await store.loadMessage(jid, key.id)
@@ -265,9 +262,17 @@ const connectionOptions = {
     }
 
     return message;
-},
+  },
   msgRetryCounterCache,
-  defaultQueryTimeoutMs: undefined,
+  browser: ['Codec \ Pauku', 'safari', '17.4.1'],
+  fireInitQueries: false,
+  downloadHistory: false,
+  syncFullHistory: false,
+  generateHighQualityLinkPreview: true,
+  markOnlineOnConnect: false,
+  connectTimeoutMs: 1800000,
+  defaultQueryTimeoutMs: 0,
+  keepAliveIntervalMs: 10000,
 }
 
 global.conn = makeWASocket(connectionOptions)
